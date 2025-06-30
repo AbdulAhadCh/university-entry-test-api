@@ -1,11 +1,20 @@
 const mongoose = require('mongoose');
-
-const personalInfoSchema = new mongoose.Schema({
+const PersonalInfoSchema = new mongoose.Schema({
+  personalInfoId: String,
   userId: String,
-  name: String,
-  cnic: String,
-  phone: String,
-  dob: String
+  firstName: String,
+  lastName: String,
+  phoneNumber: String,
+  userEmail: String,
+  userDOB: String,
+  userGenderId: Number,
+  cityId: Number,
+  provinceId: Number,
+  countryId: Number,
+  religionId: Number,
+  userAddress: String,
+  disability: Boolean,
+  accountCreatedAt: String,
+  profilePhoto: String
 });
-
-module.exports = mongoose.model('PersonalInfo', personalInfoSchema, 'personal_information');
+module.exports = mongoose.model('PersonalInfo', PersonalInfoSchema, 'personal_information');

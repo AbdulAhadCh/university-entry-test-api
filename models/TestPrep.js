@@ -1,10 +1,11 @@
 const mongoose = require('mongoose');
-
-const testPrepSchema = new mongoose.Schema({
-  userId: String,
+const TestPrepSchema = new mongoose.Schema({
+  subId: String,
+  testType: String,
   testName: String,
-  score: Number,
-  preparationLevel: String
+  duration: String,
+  totalMarks: Number,
+  testDate: String,
+  test_id: String
 });
-
-module.exports = mongoose.models.TestPrep || mongoose.model('TestPrep', testPrepSchema, 'TestPrep_collection');
+module.exports = mongoose.model('TestPrep', TestPrepSchema, 'TestPrep_collection');

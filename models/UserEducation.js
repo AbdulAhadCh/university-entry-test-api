@@ -1,11 +1,14 @@
 const mongoose = require('mongoose');
 
-const userEducationSchema = new mongoose.Schema({
-  userId: String,
-  degree: String,
-  major: String,
-  institute: String,
-  year: String
+const UserEducationSchema = new mongoose.Schema({
+  userEduId: String,
+  personalInfoId: String,
+  degreeTitle: String,
+  majorGroup: String,
+  startYear: String,
+  endYear: String,
+  completionStatus: Boolean,
+  city: String,
+  country: String
 });
-
-module.exports = mongoose.model('UserEducation', userEducationSchema, 'usereducation');
+module.exports = mongoose.model('UserEducation', UserEducationSchema, 'usereducation');

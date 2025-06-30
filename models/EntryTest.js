@@ -1,10 +1,7 @@
 const mongoose = require('mongoose');
-
-const entryTestSchema = new mongoose.Schema({
-  testId: String,
-  testName: String,
-  instituteId: String,
-  date: String
+const EntryTestSchema = new mongoose.Schema({
+  test_id: String,
+  testTitle: String,
+  sections: [mongoose.Schema.Types.Mixed] // flexible for array of objects
 });
-
-module.exports = mongoose.model('EntryTest', entryTestSchema, 'entry_Tests');
+module.exports = mongoose.model('EntryTest', EntryTestSchema, 'entry_Tests');

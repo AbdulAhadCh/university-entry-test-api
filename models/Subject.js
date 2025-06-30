@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
 
-const subjectSchema = new mongoose.Schema({
-  subjectId: String,
-  subjectName: String
+const SubjectSchema = new mongoose.Schema({
+  subId: String,
+  subjectName: String,
+  weightage: mongoose.Schema.Types.Mixed
 });
-
-module.exports = mongoose.model('Subject', subjectSchema, 'subjects');
+module.exports = mongoose.model('Subject', SubjectSchema, 'subjects');
